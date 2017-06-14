@@ -84,6 +84,14 @@ function Library(){
  	this.countTheBooks = function() {
  		console.log(this.book_array.length);
  	}
+ 	this.findBookbyTitle = function(title){
+ 		console.log(title);
+ 		for (var i = 0; i < this.book_array.length; i++) {
+ 			if(this.book_array[i].title === title){
+ 				return this.book_array[i];
+ 			};
+ 		}
+ 	};
 };
 
 function Book(title, author, genre){
@@ -106,6 +114,9 @@ console.log(library2.getListBooks());
 
 library2.removeBook('Sneetches on Beeches');
 console.log(library2.getListBooks());
+
+
+console.log(library2.findBookbyTitle('Cat in the Hat'));
 
 
 
